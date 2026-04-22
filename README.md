@@ -14,7 +14,7 @@
 
 ### 2. Et objekt er:
 - En datatype som bare brukes i arrays
-- **En instans av en klasse**
+- **En instans av en klasse** :white_check_mark:
 - En konstrøktør
 - En kommentar i koden
 
@@ -73,7 +73,7 @@ Console.WriteLine(numbers[3]);
 
 ### 9. Hvilket nøkkelord brukes i basisklassen for at en metode skal kunne overstyres?
 -  override
--  **virtual**
+-  **virtual** :white_check_mark:
 -  abstract
 -  static
 
