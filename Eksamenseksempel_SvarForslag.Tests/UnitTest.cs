@@ -11,4 +11,13 @@ public class UnitTest
         int result = c.Add(2, 3);
         Assert.Equal(5, result);
     }
+    
+    // Del 3, oppgave 5
+    [Fact]
+    public void Test_Discounted_Price()
+    {
+        Product p = new Product("Test Product", 100);
+        var result = p.GetDiscountedPrice(40);
+        Assert.Equal(60, result);
+    }
 }

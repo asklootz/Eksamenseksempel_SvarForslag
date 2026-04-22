@@ -1,5 +1,7 @@
 # Forslag til svar på Eksempel på eksamen. (PDF ligger med)
 ### Noen av spørsmålene kan du og finne i [_Program.cs_](Eksamenseksempel_SvarForslag/Program.cs) eller i [_UnitTest.cs_](Eksamenseksempel_SvarForslag.Tests/UnitTest.cs) for å teste ut kode og se at det virker. 
+### Du kan kjøre alle kode-problemene i konsoll-app'en og test-prosjektet for å se at det fungerer.
+
 
 ---
 
@@ -227,12 +229,42 @@ class Program
 ```
 
 ### 1. Forklar hva klassen `Product` representerer, og hva konstruktøren gjør.
+Product representerer en felles betegnelse og mal for hva som kan selges. Setter egenskaper som navn og pris. Konstruktøren oppretter en instans av klassen/ et objekt av klassen og setter verdi på egenskapene "Name" og "Price".
+
 ### 2. Hva blir skrevet ut når programmet kjøres? Vis kort utregning.
-### 3. Forklar én svakhet ved løsningen (tenk på validering av data).
+```csharp
+Console.WriteLine(p.GetDiscountedPrice(10)); => 450
+``` 
+$$
+    GetDiscountedPrice = Price - (\frac{Price * percent}{100}) = 500 - (\frac{500 * 10}{100}) = 450
+$$
+
+### 3. Forklar én svakhet ved løsningen. Tenk på validering av data.
+Det er ingen måte å forsikre seg om at prisen ikke er negativ eller at rabatten ikke er for høy eller lav. 
+
 ### 4. Endre koden slik at:
    - `Price` ikke kan være negativ
    - Rabattprosent må være mellom 0 og 100
    - Ugyldige verdier håndteres på en fornuftig måte
+
+Se [_Program.cs_](Eksamenseksempel_SvarForslag/Program.cs)
+
 ### 5. Skriv en enhetstest for `GetDiscountedPrice(double percent)`.
+Se [_UnitTest.cs_](Eksamenseksempel_SvarForslag.Tests/UnitTest.cs)
 
 ---
+
+## Del 4: Skriv ny kode
+
+Du skal lage et lite system for håndtering av studenter og karakterer.
+### Oppgaven:
+- Lage en klasse `Student`med følgende krav:
+    - `Name` skal være en property av typen `string`
+    - `StudentId` skal være en property av typen `int`
+    - `Grades` skal være en `List<int>`
+    - Konstruktør som setter `Name` og `StudentId`
+    - `AddGrade(int grade)` legger til en karakter
+    - `GetAverage()` returnerer gjennomsnittet
+    - `HasPassed()` returnerer `true` hvis gjennomsnitt er større enn 2.5, ellers `false`
+
+Se [_Program.cs_](Eksamenseksempel_SvarForslag/Program.cs)
