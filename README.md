@@ -7,7 +7,7 @@
 ### 1. En klasse er:
 - En mal for å beskrive en spesifikk kode logikk
 - En kodeblokk som returnerer en verdi
-- **En mal for å opprette objekter**
+- **En mal for å opprette objekter** :white_check_mark:
 - En liste med variabler
 
 ### 2. Et objekt er:
@@ -20,7 +20,7 @@
 -  Å skrive tekst til konsollen
 -  Å arve fra en annen klasse
 -  Å slette objekter
--  **Å initialisere et objekt når det opprettes**
+-  **Å initialisere et objekt når det opprettes** :white_check_mark:
 
 
 ### 4. Hva er resultatet?
@@ -31,7 +31,7 @@ for (int i = 0; i < 3; i++)
 }
 ```
 - 1 2 3
-- **0 1 2**
+- **0 1 2** :white_check_mark:
 - 0 1 2 3
 - Uendelig løkke
 
@@ -43,7 +43,7 @@ Console.WriteLine(x);
 ```
 - 5 og 5
 - 6 og 6
-- **5 og 6**
+- **5 og 6** :white_check_mark:
 - 6 og 5
 
 ### 6. Hva skjer i denne koden?
@@ -53,12 +53,12 @@ Console.WriteLine(numbers[3]);
 ```
 - Skriver 3
 - Skriver 0
-- **IndexOutOfRangeException**
+- **IndexOutOfRangeException** :white_check_mark:
 - NullReferenceException
 
 ### 7. Hva betyr private?
 - Tilgjengelig overalt
-- **Tilgjengelig kun i samme klasse**
+- **Tilgjengelig kun i samme klasse** :white_check_mark:
 - Tilgjengelig kun i subklasser
 - Tilgjengelig kun i Main
 
@@ -66,7 +66,7 @@ Console.WriteLine(numbers[3]);
 ### 8. Hva er forskjellen mellom `Array` og `List<T>`?
 -  Ingen forskjell
 -  Array har dynamisk størrelse
--  **List<T> kan vokse og krympe****
+-  **List<T> kan vokse og krympe** :white_check_mark:
 -  List<T> kan ikke lagre objekter
 
 ### 9. Hvilket nøkkelord brukes i basisklassen for at en metode skal kunne overstyres?
@@ -77,44 +77,44 @@ Console.WriteLine(numbers[3]);
 
 ### 10. Hva brukes try-catch til?
 -  Å opprette objekter
--  **Å håndtere feil / unntak**
+-  **Å håndtere feil / unntak** :white_check_mark:
 -  Å arve klasser
 -  Å lage tester
 
 ### 11. Hva er en enhetstest?
 -  En test av hele systemet
--  **En test av én liten isolert del av programmet**
+-  **En test av én liten isolert del av programmet** :white_check_mark:
 -  En test som alltid bruker database
 -  En test som bare kjøres manuelt
 
 ### 12. Hva er riktig om gode enhetstester?
 -  Avhengige av mange andre klasser
--  **Isolerte og repeterbare**
+-  **Isolerte og repeterbare** :white_check_mark:
 -  Skriver alltid til konsollen
 -  Tester alt i én testmetode
 
 ### 13. Hvilken kode oppretter et objekt av klassen `Car`?
 -  Car = new Car;
 -  Car myCar = Car();
--  **Car myCar = new Car();**
+-  **Car myCar = new Car();** :white_check_mark:
 -  new myCar = Car();
 
 ### 14. Polymorfisme er:
 -  At en klasse bare kan ha én metode
--  **At samme metodegrensesnitt kan gi ulik oppførsel**
+-  **At samme metodegrensesnitt kan gi ulik oppførsel** :white_check_mark:
 -  At alle objekter må ha samme type
 -  At variabler ikke kan endres
 
 ### 15. Hva er forskjellen på overloading og overriding?
 -  Ingen forskjell
--  **Overloading: ulik parameterliste, overriding: ny implementasjon i subklasse**
+-  **Overloading: ulik parameterliste, overriding: ny implementasjon i subklasse** :white_check_mark:
 -  Overloading brukes bare i interface
 -  Overriding brukes bare i lister
 
 ### 16. En abstrakt klasse er:
 -  En klasse som alltid kan instansieres
 -  En klasse uten egenskaper
--  **En klasse som ikke kan opprettes direkte som objekt**
+-  **En klasse som ikke kan opprettes direkte som objekt** :white_check_mark:
 -  En klasse som bare inneholder static metoder
 
 ### 17. Hva tester denne enhetstesten best?
@@ -130,13 +130,13 @@ public void Add_TwoNumbers_ReturnsCorrectSum()
 ```
 
 -  At konstruktøren kaster exception
--  **At Add(2, 3) returnerer 5**
+-  **At Add(2, 3) returnerer 5** :white_check_mark:
 -  At hele systemet virker
 -  At input leses fra tastatur
 
 ### 18. Hva er hovedideen med private felt og public properties?
 -  Å gjøre koden kortere uten grunn
--  **Å støtte innkapsling**
+-  **Å støtte innkapsling** :white_check_mark:
 -  Å erstatte konstruktører
 -  Å unngå klasser
 
@@ -150,7 +150,7 @@ public Student(string name)
 ```
 
 -  Oppretter en metode som returnerer string
--  **Initialiserer objektets tilstand**
+-  **Initialiserer objektets tilstand** :white_check_mark:
 -  Sletter objektet
 -  Arver fra en annen klasse
 
@@ -162,7 +162,7 @@ Console.WriteLine(text.Length);
 ```
 
 -  Skriver 0
--  **NullReferenceException**
+-  **NullReferenceException** :white_check_mark:
 -  IndexOutOfRangeException
 -  Kompileringsfeil
 
