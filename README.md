@@ -1,5 +1,5 @@
 # Forslag til svar på Eksempel på eksamen. (PDF ligger med)
-### Noen av spørsmålene kan du og finne i [_"Program.cs"_](Eksamenseksempel_SvarForslag/Program.cs) eller i [_UnitTest.cs_](Eksamenseksempel_SvarForslag.Tests/UnitTest.cs) for å teste ut kode og se at det virker. 
+### Noen av spørsmålene kan du og finne i [_Program.cs_](Eksamenseksempel_SvarForslag/Program.cs) eller i [_UnitTest.cs_](Eksamenseksempel_SvarForslag.Tests/UnitTest.cs) for å teste ut kode og se at det virker. 
 
 ---
 
