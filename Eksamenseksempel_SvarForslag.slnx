@@ -1,3 +1,4 @@
 <Solution>
+  <Project Path="Eksamenseksempel_SvarForslag.Tests/Eksamenseksempel_SvarForslag.Tests.csproj" />
   <Project Path="Eksamenseksempel_SvarForslag/Eksamenseksempel_SvarForslag.csproj" />
 </Solution>

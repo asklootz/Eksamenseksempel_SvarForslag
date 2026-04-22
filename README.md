@@ -1,5 +1,5 @@
 # Forslag til svar på Eksempel på eksamen. (PDF ligger med)
-### Noen av spørsmålene kan du og finne i _"Program.cs"_ for å teste ut kode og se at det virker. 
+### Noen av spørsmålene kan du og finne i [_"Program.cs"_](Eksamenseksempel_SvarForslag/Program.cs) eller i [_UnitTest.cs_](Eksamenseksempel_SvarForslag.Tests/UnitTest.cs) for å teste ut kode og se at det virker. 
 
 ---
 
@@ -165,5 +165,74 @@ Console.WriteLine(text.Length);
 -  **NullReferenceException**
 -  IndexOutOfRangeException
 -  Kompileringsfeil
+
+---
+
+## Del 2: Svar kort med faglig begrunnelse
+### 2.1 Forklar hva en property er i C#, og hvorfor den ofte er bedre enn et offentlig felt.
+En property (og kjent som "egenskap") er en kontrollert måte å lese(get) og skrive(set) verdier på et objekt med hjelp av "get"- og "set"- metoder. Er et som et felt, men kan innehold logikk internt. Hvorfor er det bedre:
+- Støtte for innklapsling ved å skjule interne detaljer
+- Gjør det mulig å ha validering/regler når verdier skrives eller leses
+- Bedre å vedlikeholde og fleksibel om implementasjon endres senere
+
+### 2.2 Forklar forskjellen mellom en abstrakt klasse og et interface.
+- En abstrakt klasse kan ha metoder som skal kunne ha instrukser og kode i seg som en annen klasse kan arve og kjøre direkte etter å ha arvet, men en klasse kan kun arve fra én klasse
+- Et interface kan definere metoder, men metodene kan ikke ha kode/instrukser i seg, det må defineres i arveklassen. Men en klasse kan arve dra flere interfaces samtidig. 
+
+### 2.3 Forklar hva som kjennetegner en god enhetstest.
+En god enhetstest vil være:
+- Isolert: Kjører kun én metode eller funksjon om gangen, kjører uavhengig av andre tester og ikke avhengeig av ekstrerne ressurser (database, API, etc.)
+- Repeterbar: Gir samme resultat hver gang, selv etter koden er blitt endret, refaktorert eller vedlikeholdt.
+- AAA: Følger mønsteret av "Arrange, Act og Assert". 
+
+### 2.4 Forklar hva abstraksjon betyr i OOP.
+Det handler om å skjule kompleksitet og kun vise det som er relevant for brukeren av et objekt. Det legger fokus på _hva_ metoden til et objekt gjøre, ikke _hvordan_ det gjør det.
+
+### 2.5 Forklar hva en konstruktør er og hvorfor vi bruker den.
+Det er en spesiell metode som kjøres automatisk når man oppretter et nytt objekt. Den kan gjenkjennes i klassen med at den har ingen retur-type. Den brukes til å sette verdier på egenskaper når vi oppretter et nytt objekt, kan og brukes til å gjøre klar annet som kreves av objektet. (F.eks. kobling til en database.)
+
+---
+
+## Del 3: Forklar koden og du skal endre på koden 
+
+```csharp
+using System;
+
+public class Product
+{
+    public string Name { get; set; }
+    public double Price { get; set; }
+
+    public Product(string name, double price)
+    {
+        Name = name;
+        Price = price;
+    }
+
+    public double GetDiscountedPrice(double percent)
+    {
+        return Price - (Price * percent / 100);
+    }
+}
+```
+```csharp
+class Program
+{
+    static void Main(string[] args)
+    {
+        Product p = new Product("Mouse", 500);
+        Console.WriteLine(p.GetDiscountedPrice(10));
+    }
+}
+```
+
+### 1. Forklar hva klassen `Product` representerer, og hva konstruktøren gjør.
+### 2. Hva blir skrevet ut når programmet kjøres? Vis kort utregning.
+### 3. Forklar én svakhet ved løsningen (tenk på validering av data).
+### 4. Endre koden slik at:
+   - `Price` ikke kan være negativ
+   - Rabattprosent må være mellom 0 og 100
+   - Ugyldige verdier håndteres på en fornuftig måte
+### 5. Skriv en enhetstest for `GetDiscountedPrice(double percent)`.
 
 ---
